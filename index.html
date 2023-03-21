@@ -6,17 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChatGPT - Clone</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    
   </head>
   <body>
     <div id="app">
-      <div id="chat_container"></div>
+      <nav>
+        <div class="nav-header">
+          <button class="newchat" onclick="window.location.replace('/')"><i class="fa" data-feather="menu"></i><p>Add new chat</p></button>
+          <ul>
+            <!-- <li><i class="fa" data-feather="message-square"></i><a href="http://">Lorem ipsum dolor sit amet.</a></li> -->
+          </ul>
+        </div>
+        <div class="nav-footer">
+          <hr>
+          <ul>
+            <li onclick="window.location.reload()"><i class="fa" data-feather="trash-2"></i><a href="#" >Clear chat</a></li>
+            <li><i class="fa" data-feather="sun"></i><a href="#">Light</a></li>
+            <li><i class="fa" data-feather="log-out"></i><a href="#">Discord</a></li>
+            <li><i class="fa" data-feather="help-circle"></i><a href="#">FAQ</a></li>
+            <li><i class="fa" data-feather="log-out"></i><a href="#">Log out</a></li>
+          </ul>
+        </div>
+      </nav>
 
-      <form>
-        <textarea name="prompt" rows="1" cols="1" placeholder="Hello, write what do you want.."></textarea>
-        <button type="submit"><img src="assets/send.svg" alt="send" />
-      </form>
+      <div class="content">
+        <header>
+          <h1>ChatGPT Command</h1>
+        </header>
+        <div id="chat_container">
+        </div>
+        <form>
+          <textarea name="prompt" rows="1" cols="1" placeholder="Hello, write what do you want.."></textarea>
+          <button type="submit"><img src="assets/send.svg" alt="send" />
+          </form>
+      </div>
+    
     </div>
-
+    <script src="main.js"></script>
     <script type="module" src="script.js"></script>
+    <script>
+      feather.replace()
+    </script>
   </body>
 </html>

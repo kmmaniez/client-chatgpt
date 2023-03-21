@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+:root{
+  --bg-color: #343541;
+  --bg-color-ai: #40414F;
+  --bg-hover: #2c2c2c;
+
+  --white: #fff;
+  --white-grey: #eaeaea;
+  --dark: rgb(36, 36, 36);
+
+  --font-medium: 16px;
+  --font-small: 12px;
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+body {
+  background: var(--bg-color);
+}
+
+#app {
+  width: 100vw;
+  height: auto;
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+section.chatgpt{
+  /* width: 100%; */
+  width: inherit;
+  height: 100vh;
+  background-color: var(--bg-color-ai);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header{
+  padding: 16px;
+  /* background-color: red; */
+  color: var(--white);
+  text-align: center;
+}
+form {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px;
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+} 
+form img {
+  width: 30px;
+  height: 30px;
+}
+.wrapper.ai{
+ background-color: #454654;
+}
+.wrapper.false{
+ background-color: #393a47;
+}
+.message {
+  flex: 1;
+  color: #dcdcdc;
+  font-size: 20px;
+  max-width: 100%;
+  overflow-x: scroll;
+  white-space: pre-wrap; 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 0 16px;
+}
+
+.chat {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 16px 24px;
+}
+button {
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+}
+textarea {
+  width: 100%;
+  color:  var(--white);
+  font-size: 18px;
+  padding: 10px;
+  background: transparent;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+
+/* Navigation */
+nav{
+  width: 100%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: var(--dark);
+  /* background-color: #5436DA; */
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* overflow: scroll; */
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+nav .new-chat{
+  /* height: auto; */
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: scroll;
+}
+nav ul.list-chat{
+  width: auto;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--white);
+  background-color: transparent;
+}
+nav .new-chat ul.list-chat li{
+  /* width: max-content; */
+  padding: 16px 8px;
+  background-color: inherit;
+  font-size: var(--font-medium);
+  /* background-color: red; */
+}
+
+nav .new-chat > *{
+  width: 100%;
+  height: auto;
+  background-color: var(--bg-color);
+  color: var(--white);
+}
+nav .new-chat > button{
+  padding: 16px;
+  font-size: var(--font-medium);
+  background-color: var(--bg-color);
+  border: 1px solid #484848;
+  text-align: left;
+  border-radius: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+nav .new-chat > button:hover{
+  background-color:var(--bg-hover);
+}
+nav .new-chat ul.list-chat li:hover{
+  background-color: var(--bg-hover);
+}
+
+
+
+nav .nav-footer{
+  width: 100%;
+  height: auto;
+  /* background-color: red; */
+}
+nav .nav-footer ul.list-menu{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--white);
+}
+nav .nav-footer ul.list-menu li{
+  padding: 12px 8px;
+  background-color: inherit;
+  font-size: var(--font-medium);
+  /* background-color: red; */
+}
+ul{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+  color: var(--white-grey);
+}
+span{
+  display: inline;
+  padding: 8px 12px;
+  /* background-color: pink; */
+}
+
+nav .nav-footer ul.list-menu li:hover{
+  background-color: #343434;
+}
+
+@media only screen and (max-width: 800px){
+  
+
+  nav .new-chat > button{
+    font-size: var(--font-medium);
+  }
+  span{
+    display: inline;
+    padding: 16px;
+  }
+  nav .new-chat ul.list-chat li{
+    width: auto;
+  }
+  
+  nav .nav-footer ul.list-menu li{
+    padding: 16px 0;
+    width: 100%;
+  }
+
+}
